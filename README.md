@@ -1,4 +1,4 @@
-# UMOL-PDB
+# uMOL-MolecularPDB
 A module for reading and writing PDB files.
 ``read()`` will return a ``PDB`` object which
 can be converted to a ``MolecularSystem`` object
