@@ -1,0 +1,4 @@
+Assort PDB records
+======================
+
+.. jl:autofile:: src/assort_lines.jl
