@@ -13,6 +13,9 @@ and ``read()`` to signify which PDB file format.
 * RCSB
 * VMD
 
+## Dependencies
+* MolecularDataType (a uMOL subproject)
+
 ## Usage
 ```julia
 import MolecularPDB: read, save, RCSB, VMD
