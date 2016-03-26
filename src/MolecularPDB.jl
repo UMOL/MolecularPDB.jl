@@ -1,7 +1,3 @@
-if !isdefined(:MolecularDataType)
-    include(joinpath("..","..","MolecularDataType","src","MolecularDataType.jl"))
-end
-
 __precompile__(true)
 """
 Module ``MolecularPDB`` provides a reader and writer for processing many flavored 
