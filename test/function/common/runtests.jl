@@ -12,6 +12,7 @@ include("test_format_atom_element.jl")
 include("test_format_atom_charge.jl")
 
 include(joinpath("parse_ATOM","runtests.jl"))
+include(joinpath("format_ATOM","runtests.jl"))
 
 include("test_create_atoms.jl")
 
@@ -23,4 +24,3 @@ include("test_format_lattice_lengths.jl")
 include("test_format_lattice_angles.jl")
 include("test_format_lattice_chain_count.jl")
 include("test_format_CRYST1.jl")
-include("test_format_ATOM.jl")
