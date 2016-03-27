@@ -27,4 +27,4 @@ end
 
 test_format_atom_name(" CA ", " CA ")
 test_format_atom_name("CA  ", "CA  ")
-test_format_atom_name("CA ",  "CA ")
+test_format_atom_name("CA ",  " CA ")
