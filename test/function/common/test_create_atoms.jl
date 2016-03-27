@@ -3,18 +3,21 @@ A test for create_atoms()
 
 Arguments
 ----------
+format:Symbol
+    format of the input PDB file 
+
 file_name:AbstractString
     File name of the input RCSB PDB file.
 
 solution:Array{Atom,1}    
     answer key
 """
-function test_create_atoms(file_name, solution)
+function test_create_atoms(format::Symbol, file_name::AbstractString, solution::Array)
 
     println("----------------------------------------")
     print_with_color(:blue, "Test create_atoms()\n\n")
 
-    answer = create_atoms(file_name)
+    answer = create_atoms(format, file_name)
 
     @test answer == solution
     
@@ -24,7 +27,7 @@ function test_create_atoms(file_name, solution)
     return true
 end
 
-test_create_atoms(
+test_create_atoms(:rcsb,
     joinpath(TestParams.data_dir(), "RCSB", "1_line_RCSB.pdb"),
     [Atom(
         index = 1,
@@ -38,7 +41,7 @@ test_create_atoms(
         element = "N")]
 )
 
-test_create_atoms(
+test_create_atoms(:vmd,
     joinpath(TestParams.data_dir(), "VMD", "1_line_VMD.pdb"),
     [Atom(
         index = 1,

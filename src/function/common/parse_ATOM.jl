@@ -5,6 +5,9 @@ The file format for ATOM is described here
 
 Arguments
 ----------
+format:Symbol
+    format of the input PDB file 
+
 index:Integer 
     sequential index for this atom 
 
@@ -14,7 +17,7 @@ line:AbstractString
 system_name:AbstractString
     name of the output molecular system
 """
-function parse_ATOM(index::Integer, line::AbstractString, system_name::AbstractString="")
+function parse_ATOM(format::Symbol, index::Integer, line::AbstractString, system_name::AbstractString="")
     line_length = length(line)
     if line_length == 0 
         return Atom()
@@ -24,7 +27,13 @@ function parse_ATOM(index::Integer, line::AbstractString, system_name::AbstractS
     push!(args, (:index, index))
     push!(args, (:atom_name, line[13:16]))
     push!(args, (:alt_location, line[17]))
-    push!(args, (:residue_name, strip(line[18:20])))
+
+    if format == :rcsb 
+        push!(args, (:residue_name, strip(line[18:20])))
+    else 
+        push!(args, (:residue_name, strip(line[18:21])))
+    end
+
     push!(args, (:chain_name, string(line[22])))
     push!(args, (:residue_id, Int(parse(strip(line[23:26])))))
     push!(args, (:insertion, line[27]))

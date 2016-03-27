@@ -33,8 +33,6 @@ import MolecularPDB.format_CRYST1
 import MolecularDataType: MolecularSystem, Segment, Residue, Atom
 include("params.jl")
 
-include(joinpath("..","..","JuliaTestKit","src","JuliaTestKit.jl"))
-using JuliaTestKit
 
 include(joinpath("type","PDB","runtests.jl"))
 
