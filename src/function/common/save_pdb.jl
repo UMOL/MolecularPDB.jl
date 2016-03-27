@@ -23,7 +23,7 @@ function save_pdb(output_file_name::AbstractString, obj::PDB, format::Symbol)
 
     # ATOM
     for atom in obtain(molecule, :atom_iterator)
-        write(OUT, string(format_ATOM(atom, format), "\r\n"))
+        write(OUT, string(format_ATOM(format,atom), "\r\n"))
     end
 
     # END

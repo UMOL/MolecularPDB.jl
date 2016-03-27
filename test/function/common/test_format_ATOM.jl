@@ -3,24 +3,24 @@ A test for format_ATOM()
 
 Arguments
 ----------
-atom:Atom 
-    an object of type Atom 
-
 format:Symbol 
     options: [:vmd, :rcsb]
+
+atom:Atom 
+    an object of type Atom 
 
 solution:AbstractString
     answer key
 """
 function test_format_ATOM(
-    atom::Atom,
     format::Symbol,
+    atom::Atom,
     solution::AbstractString)
 
     println("----------------------------------------")
     print_with_color(:blue, "Test format_ATOM()\n\n")
 
-    answer = format_ATOM(atom, format)
+    answer = format_ATOM(format, atom)
 
     @test answer == solution
 
@@ -31,6 +31,7 @@ function test_format_ATOM(
 end
 
 test_format_ATOM(
+    :rcsb,
     Atom(
         index = 1,
         atom_name = " N  ",
@@ -42,11 +43,11 @@ test_format_ATOM(
         beta = 95.12,
         element = "N",
         charge=0),
-    :rcsb,
     "ATOM      1  N   PRO A   7      32.551   1.074  73.319  1.00 95.12           N  "
 )
 
 test_format_ATOM(
+    :vmd,
     Atom(
         index = 1,
         atom_name = " N  ",
@@ -59,6 +60,5 @@ test_format_ATOM(
         beta = 95.12,
         element = "N",
         charge=0),
-    :vmd,
     "ATOM      1  N   PRO A   7      32.551   1.074  73.319  1.00 95.12      ABC  N"
 )

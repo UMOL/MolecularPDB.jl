@@ -67,13 +67,13 @@ VMD flavored PDB example::
 
 Arguments
 ---------
-atom:Atom 
-    an instance of type Atom
-
 format:Symbol 
     choices: [:rcsb, :vmd]
+    
+atom:Atom 
+    an instance of type Atom
 """
-function format_ATOM(atom::Atom, format::Symbol)
+function format_ATOM(format::Symbol, atom::Atom)
     atom_name = obtain(atom, :raw_atom_name)
 
     # create a string of spaces of length n
@@ -93,8 +93,7 @@ function format_ATOM(atom::Atom, format::Symbol)
         space(1),
         format_atom_name(atom_name),
         obtain(atom, :alt_location),
-        format_residue_name(obtain(atom, :residue_name)),
-        space(1),
+        format_residue_name(format, obtain(atom, :residue_name)),
         format_chain_name(obtain(atom, :chain_name)),
         format_residue_id(obtain(atom, :residue_id)),
         obtain(atom, :insertion),
