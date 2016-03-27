@@ -11,7 +11,8 @@ include("test_format_segment_name.jl")
 include("test_format_atom_element.jl")
 include("test_format_atom_charge.jl")
 
-include("test_parse_ATOM.jl")
+include(joinpath("parse_ATOM","runtests.jl"))
+
 include("test_create_atoms.jl")
 
 include("test_parse_symmetry.jl")
