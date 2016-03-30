@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/UMOL/MolecularPDB.jl.svg?branch=master)](https://travis-ci.org/UMOL/MolecularPDB.jl)
+
 # uMOL-MolecularPDB
 A module for reading and writing PDB files.
 ``read()`` will return a ``PDB`` object which
