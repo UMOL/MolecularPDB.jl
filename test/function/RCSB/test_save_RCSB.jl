@@ -22,8 +22,8 @@ function test_save_RCSB(
 
     save(RCSB, output_file, obj) 
 
-    answer = readall(output_file)
-    key = readall(key_file)
+    answer = split(readall(output_file))
+    key = split(readall(key_file))
 
     @test answer == key 
 
