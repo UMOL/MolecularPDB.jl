@@ -219,14 +219,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Users/steven/AppData/Local/Temp/Temp1_jheation_ai_2015_11_08.zip/jheation_ai_2015_11_08/readme.txt",
-			"settings":
-			{
-				"buffer_size": 591,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -272,13 +264,15 @@
 		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/src/function/RCSB",
 		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/src/function/VMD",
 		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/src/type",
-		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/src/type/PdbRecord",
 		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test",
-		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test/common",
-		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test/RCSB"
+		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test/function",
+		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test/function/common"
 	],
 	"file_history":
 	[
+		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test/params.jl",
+		"/I/DEVELOP/umol/julia/develop/uMOL-develop/deps/MolecularPDB/test/params.jl",
+		"/C/Users/steven/AppData/Local/Temp/Temp1_jheation_ai_2015_11_08.zip/jheation_ai_2015_11_08/readme.txt",
 		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test/common/test_format_lattice_angles.jl",
 		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test/common/test_format_lattice_lengths.jl",
 		"/I/DEVELOP/umol/julia/uMOL/pkg/MolecularPDB/test/runtests.jl",
@@ -403,10 +397,7 @@
 		"/I/DEVELOP/umol/julia/UMOL/pkg/PDB/test/type/PdbRecord/test_find_atoms_by_field.jl",
 		"/I/DEVELOP/umol/julia/UMOL/pkg/PDB/test/type/PdbRecord/unit_test_1_find_atoms_by_residue.jl",
 		"/I/DEVELOP/umol/julia/UMOL/pkg/PDB/test/type/PdbRecord/unit_test_2_find_atoms_by_residue.jl",
-		"/I/DEVELOP/umol/julia/UMOL/pkg/PDB/test/type/PdbRecord/unit_test_2_find_atoms_by_segment.jl",
-		"/I/DEVELOP/umol/julia/UMOL/pkg/PDB/test/type/PdbRecord/unit_test_1_find_atoms_by_segment.jl",
-		"/I/DEVELOP/umol/julia/UMOL/pkg/PDB/test/type/PdbRecord/unit_test_3_find_atoms_by_segment.jl",
-		"/I/DEVELOP/umol/julia/UMOL/pkg/PDB/test/type/PdbRecord/test_find_atoms_by_residue.jl"
+		"/I/DEVELOP/umol/julia/UMOL/pkg/PDB/test/type/PdbRecord/unit_test_2_find_atoms_by_segment.jl"
 	],
 	"find":
 	{
@@ -572,37 +563,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/steven/AppData/Local/Temp/Temp1_jheation_ai_2015_11_08.zip/jheation_ai_2015_11_08/readme.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 591,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
