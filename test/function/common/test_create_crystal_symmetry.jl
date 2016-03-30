@@ -29,7 +29,7 @@ function test_create_crystal_symmetry(pdb_file::AbstractString, solution::Crysta
 end
 
 test_create_crystal_symmetry(
-    joinpath("data","RCSB","1_line_RCSB.pdb"),
+    joinpath(TestParams.data_dir(),"RCSB","1_line_RCSB.pdb"),
     CrystalSymmetry(lattice="P", symmetries=[(4,1),(2,0),(2,0)],
         lengths=[101.042, 101.042, 165.806],
         angles=[90.0, 90.0, 90.0],
@@ -38,7 +38,7 @@ test_create_crystal_symmetry(
 )
 
 test_create_crystal_symmetry(
-    joinpath("data","VMD","1_line_VMD.pdb"),
+    joinpath(TestParams.data_dir(),"VMD","1_line_VMD.pdb"),
     CrystalSymmetry(lattice="P", symmetries=[(1,0),(0,0),(0,0)],
         lengths=[101.042, 101.042, 165.806],
         angles=[90.0, 90.0, 90.0],
