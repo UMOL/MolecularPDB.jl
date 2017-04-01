@@ -1,5 +1,8 @@
+import SimpleMolecule.obtain
+
+
 """
-Save a ``PDB`` object to an PDB file.
+Save a ``Molecule`` object to an Molecule file.
 Return ``true`` if succeed and ``false`` if not.
 
 Arguments
@@ -7,23 +10,21 @@ Arguments
 output_file_name:AbstractString
     File name of the output file.
 
-obj:PDB
-    An instance of type ``PDB``
+obj:Molecule
+    An instance of type ``Molecule``
 
 format:Symbol
     choices: [:rcsb, :vmd]
 """
-function save_pdb(output_file_name::AbstractString, obj::PDB, format::Symbol)
+function save_pdb(output_file_name::AbstractString, molecule::Molecule, format::Symbol)
     OUT = open(output_file_name, "w")
 
-    molecule = obtain(obj, :molecular_system)
-
     # CRYST1
-    write(OUT, string(format_CRYST1(obtain(molecule, :crystal_symmetry), format)), "\r\n")
+    # write(OUT, string(format_CRYST1(obtain(molecule, :crystal_symmetry), format)), "\r\n")
 
     # ATOM
-    for atom in obtain(molecule, :atom_iterator)
-        write(OUT, string(format_ATOM(format,atom), "\r\n"))
+    for atom in obtain(molecule, :atoms)
+        write(OUT, string(format_ATOM(format, atom), "\r\n"))
     end
 
     # END

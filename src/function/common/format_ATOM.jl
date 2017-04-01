@@ -74,7 +74,7 @@ atom:Atom
     an instance of type Atom
 """
 function format_ATOM(format::Symbol, atom::Atom)
-    atom_name = obtain(atom, :raw_atom_name)
+    atom_name = obtain(atom, :atom_name)
 
     # create a string of spaces of length n
     function space(n::Integer)
@@ -85,7 +85,7 @@ function format_ATOM(format::Symbol, atom::Atom)
         return string(char_list...)
     end
 
-    coordinate = obtain(atom, :coordinate)[1]
+    coordinate = obtain(atom, :coordinate)
 
     common_part = string("ATOM",
         space(2),

@@ -11,7 +11,7 @@ and ``:field`` is the requested field name (Symbol).
 +--------------------+---------------------+-----------------------------------------+
 """
 immutable PDB
-    molecular_system::MolecularSystem
+    molecular_system::Molecule
 end 
 
 

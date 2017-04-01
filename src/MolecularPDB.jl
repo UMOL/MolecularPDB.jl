@@ -1,4 +1,3 @@
-__precompile__(true)
 """
 Module ``MolecularPDB`` provides a reader and writer for processing many flavored 
 PDB data file. The following flavors are supported:
@@ -28,8 +27,8 @@ end
 export RCSB, VMD, PDB
 export read, save
 
-import MolecularDataType
-import MolecularDataType: Atom, Residue, Segment, MolecularSystem, CrystalSymmetry, obtain
+import SimpleMolecule
+import SimpleMolecule: Atom, Molecule
 
 include(joinpath("type","all.jl"))
 include(joinpath("function", "all.jl"))
